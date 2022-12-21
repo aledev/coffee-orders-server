@@ -21,7 +21,7 @@ let testOrders = []
 // COFFEE ORDERS
 app.post('/test/new-order', orderHandler.newOrder)
 app.put('/test/orders/:id', orderHandler.updateOrder)
-app.delete('text/orders/:id', orderHandler.deleteOrder)
+app.delete('test/orders/:id', orderHandler.deleteOrder)
 app.get('/test/orders', orderHandler.getAllOrders)
 app.get('/test/clear-orders', orderHandler.clearOrders)
 
