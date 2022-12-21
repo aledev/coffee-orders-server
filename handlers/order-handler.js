@@ -93,7 +93,7 @@ const updateOrder = async (req, res) => {
     }
 }
 
-const deleteOrder = async (req, res) => {
+const deleteOrder = async (req, res) => {    
     const orderId = parseInt(req.params.id)
     console.debug(`Order to delete: ${orderId}`)
 
