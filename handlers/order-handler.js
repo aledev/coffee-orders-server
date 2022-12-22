@@ -98,7 +98,10 @@ const deleteOrder = async (req, res) => {
     console.debug(`Order to delete: ${orderId}`)
 
     const order = testOrders.find(order => order.id == orderId)
-    testOrders = testOrders.filter(order => order.id != order.id)
+    
+    if (order) {        
+        const newLocal = testOrders = testOrders.filter(order => order.id !== orderId)
+    }
 
     res.status(200)
         .json(order)
