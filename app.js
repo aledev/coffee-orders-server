@@ -23,6 +23,7 @@ app.post('/test/new-order', orderHandler.newOrder)
 app.put('/test/orders/:id', orderHandler.updateOrder)
 app.delete('/test/orders/:id', orderHandler.deleteOrder)
 app.get('/test/orders', orderHandler.getAllOrders)
+app.get('/test/orders/:id', orderHandler.getOrder)
 app.get('/test/clear-orders', orderHandler.clearOrders)
 
 // Port Configuration

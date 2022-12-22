@@ -109,6 +109,16 @@ const getAllOrders = async (_, res) => {
         .json(testOrders)
 }
 
+const getOrder = async (req, res) => {
+    const orderId = parseInt(req.params.id)
+    console.debug(`Getting order id: ${orderId}`)
+
+    const order = testOrders.find(order => order.id == orderId)
+
+    res.status(200)
+        .json(order)
+}
+
 const clearOrders = async (_, res) => {
     testOrders = []
     res.status(200)
@@ -122,5 +132,6 @@ module.exports = {
     deleteOrder, 
     updateOrder, 
     getAllOrders, 
+    getOrder,
     clearOrders
 }
